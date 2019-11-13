@@ -16,5 +16,6 @@ jobs:
     - name: Hello Repo
       run: |
         echo "Hello world!"
+        pwd
         echo $GITHUB_WORKSPACE
-        ls ${!GITHUB_WORKSPACE}
+        ls ${GITHUB_WORKSPACE}
