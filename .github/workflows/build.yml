@@ -8,18 +8,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
-    - name: Hello Repo
-      run: |
-        echo "Hello world!"
-        pwd
-        echo $GITHUB_WORKSPACE
-        ls ${GITHUB_WORKSPACE}
+      env:
+        NAME: JT
+      - uses: actions/checkout@v1
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: Hello Repo
+        run: |
+          echo "Hello world!"
+          pwd
+          echo $GITHUB_WORKSPACE
+          echo $NAME
+          ls ${GITHUB_WORKSPACE}
 
-    - name: Hello Ruby
-      run: |
-        ruby main.rb
+      - name: Hello Ruby
+        run: |
+          ruby main.rb
