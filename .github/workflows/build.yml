@@ -19,3 +19,7 @@ jobs:
         pwd
         echo $GITHUB_WORKSPACE
         ls ${GITHUB_WORKSPACE}
+
+    - name: Hello Ruby
+      run: |
+        ruby main.rb
