@@ -8,6 +8,7 @@ jobs:
 
     env:
       NAME: JT
+      SECRET_SUPER_HERO_NAME: ${{ secrets.SUPER_HERO_NAME }}
 
     steps:
       - uses: actions/checkout@v1
@@ -21,6 +22,7 @@ jobs:
           pwd
           echo $GITHUB_WORKSPACE
           echo $NAME
+          echo $SECRET_SUPER_HERO_NAME
           ls ${GITHUB_WORKSPACE}
 
       - name: Hello Ruby
